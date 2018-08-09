@@ -1,5 +1,6 @@
 from __future__ import division
 from friends_methods import friends_of_friend_ids_bad as foaf_m
+from friends_methods import *
 #cria uma rede de users
 users = [
   {"id":0, "name":"Hero"},
@@ -42,5 +43,4 @@ avg_connections = total_connections / num_users
 #cria uma lista da quantidade de amigos por id
 num_friends_by_id = [(user["id"], number_of_friends(user)) for user in users ] 
 #sorted(num_friends_by_id, key=lambda (user_id, num_friends): num_friends, reverse=True)
-for user in users:
-  print(user["name"]+": "+str(foaf_m(user)))
+print(friends_of_friend_ids(users[3]))
