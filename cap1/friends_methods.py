@@ -18,6 +18,4 @@ def friends_of_friend_ids(user):
                     for friend in user["friends"] # para cada um de meus amigos
                     for foaf in friend["friends"] # que contam *their* amigos
                     if not_the_same(user, foaf)   # que não sejam eu
-                    and not_friends(user, foaf))  # e que não são meus amigos
-
- 
+                    and not_friends(user, foaf))  # e que não são meus amigos 
